@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center center;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none outside none;
+}
+
+:root {
+  --color-pink: hsl(322, 100%, 66%);
+  --color-very-pale-cyan: hsl(193, 100%, 96%);
+  --color-dark-cyan: hsl(192, 100%, 9%);
+  --color-grayish-blue: hsl(208, 11%, 55%);
+
+  --color-lighter-pink: hsla(322, 100%, 66%, 0.7);
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+
+  width: 25rem;
+  font-size: 17px;
+}
+
+button,
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.first-part {
+  background-color: var(--color-very-pale-cyan);
+
+  background-image: url(images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+header {
+  padding: 2rem 1rem 2rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 3rem;
+
+  background-color: var(--color-very-pale-cyan);
+}
+
+header img {
+  width: 7rem;
+}
+
+header button {
+  font-size: 13px;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header button:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--color-grayish-blue);
+}
+
+header button:focus {
+  transition: all 0.3s ease-in-out;
+  color: var(--color-grayish-blue);
+}
+
+.introduction {
+  padding: 0 2rem 2rem 2rem;
+
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+
+  justify-items: center;
+}
+
+.introduction .content {
+  display: grid;
+  justify-items: center;
+}
+
+.introduction h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.introduction button {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: var(--color-pink);
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 0.7rem 3rem 0.7rem 3rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  margin: 1rem 0 1rem 0;
+}
+
+.introduction button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-lighter-pink);
+}
+
+.introduction button:focus {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-lighter-pink);
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+
+  background-color: white;
+
+  margin-top: 2rem;
+}
+
+.cards .card {
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  display: grid;
+  gap: 1rem;
+
+  text-align: center;
+
+  width: 90%;
+}
+
+.cards .card h2 {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cards .card p {
+  color: var(--color-grayish-blue);
+}
+
+.cards .card-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.call-to-action {
+  padding: 2rem 0.5rem 2rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  background-color: white;
+
+  width: 90%;
+
+  display: grid;
+  justify-items: center;
+
+  font-weight: 600;
+
+  position: relative;
+  top: 5rem;
+}
+
+.call-to-action button {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: var(--color-pink);
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 0.7rem 3rem 0.7rem 3rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  margin: 1rem 0 1rem 0;
+}
+
+.call-to-action button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-lighter-pink);
+}
+
+.call-to-action button:focus {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-lighter-pink);
+}
+
+footer {
+  background-color: var(--color-dark-cyan);
+  color: white;
+
+  padding: 0rem 1rem 3rem 1rem;
+
+  display: grid;
+  gap: 3rem;
+}
+
+footer p {
+  font-family: "Poppins", sans-serif;
+}
+
+footer .filter-white {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(201deg)
+    brightness(104%) contrast(101%);
+
+  width: 10rem;
+
+  padding-top: 8rem;
+}
+
+footer .first-part-footer div {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .links {
+  display: grid;
+  gap: 1rem;
+}
+
+footer div img {
+  object-fit: contain;
+  align-self: center;
+}
+
+footer ul {
+  display: grid;
+  gap: 1rem;
+}
+
+footer li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer .first-part-footer {
+  display: grid;
+  gap: 1rem;
+}
+
+footer .socials {
+  display: flex;
+  gap: 1rem;
+
+  justify-content: center;
+}
+
+footer .socials i {
+  outline: 2px solid white;
+  padding: 0.3rem;
+  border-radius: 100%;
+}
+
+footer .socials i:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--color-pink);
+
+  outline: 2px solid var(--color-pink);
+}
+
+footer .socials-and-copyright {
+  display: grid;
+  gap: 1rem;
+
+  text-align: center;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1090px) {
+  main {
+    width: 100%;
+  }
+
+  .introduction {
+    display: flex;
+    gap: 3rem;
+    padding: 0 3rem 0 3rem;
+  }
+
+  .introduction .content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
+  }
+
+  .introduction h1 {
+    font-size: 30px;
+    width: 60%;
+  }
+
+  .introduction .hero-image {
+    min-width: 700px;
+    padding-bottom: 2rem;
+  }
+
+  .cards {
+    justify-items: center;
+  }
+
+  .cards .card h2 {
+    margin-top: 0;
+  }
+
+  .cards .card {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+    padding: 3rem 6rem 3rem 6rem;
+  }
+
+  .cards .card .card-content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
+  }
+
+  .cards .card .card-content p {
+    width: 60%;
+  }
+
+  .cards .card .card-image {
+    width: 50%;
+  }
+
+  .call-to-action {
+    width: 40%;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5rem;
+
+    font-size: 13px;
+  }
+
+  footer .filter-white {
+    padding-top: 0rem;
+    width: 8rem;
+  }
+
+  footer .links {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
+  }
+
+  footer .first-part-footer {
+    width: 25%;
+  }
+
+  footer .socials-and-copyright {
+    justify-items: start;
+  }
+
+  footer .copyright {
+    position: relative;
+    top: 3rem;
+  }
+}
